@@ -23,18 +23,20 @@
   width: 200px;
   visibility: hidden;
   z-index: 10;
-  animation: float 12s 2s infinite;
 }
 
 #ballon {
   left: 20px;
+  animation: float 12s 2s infinite;
 }
 
 #ballon2 {
+  animation: float 12s 3s infinite;
   right: 20px;
 }
 
 #ballon3 {
+  animation: float 12s 4s infinite;
   right: 0;
   left: 0;
   margin: 0 auto;
@@ -90,14 +92,64 @@
 
 .hb {
   font-family: "Calligraffitti", cursive;
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 5px;
   font-weight: bold;
-
 }
 
 .name {
   font-family: "Caveat Brush", cursive;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  #avi {
+    width: 200px;
+    height: 200px;
+  }
+
+  .main {
+    padding: 4rem 3rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .main {
+    padding: 4rem 1rem;
+  }
+
+  #avi {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hb {
+    font-size: 30px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .images {
+    justify-content: center;
+  }
+
+  .img-none {
+    display: none;
+  }
+
+  #ballon {
+    width: 70px;
+  }
+
+  #ballon3 {
+    width: 60px;
+  }
+
+  #ballon2 {
+    width: 70px;
+  }
+
 }

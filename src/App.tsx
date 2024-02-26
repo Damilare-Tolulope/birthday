@@ -37,13 +37,17 @@ const App = () => {
       <div className="container">
         <Fade className="main" direction="up">
           <div>
-            {/* <img id="flowers" src={flowers} alt="flowers" /> */}
             <div className="images">
               <Zoom delay={500}>
                 <img id="avi" src={images[index]} alt="" />
               </Zoom>
               <Zoom delay={100}>
-                <img id="avi" src={images[index1]} alt="" />
+                <img
+                  id="avi"
+                  className="img-none"
+                  src={images[index1]}
+                  alt=""
+                />
               </Zoom>
             </div>
             <div className="text">
