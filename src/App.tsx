@@ -12,6 +12,7 @@ import img7 from "./assets/images/img7.jpg";
 import ballon from "./assets/images/ballon.png";
 import ballon2 from "./assets/images/ballon2.png";
 import ballon3 from "./assets/images/balloons.png";
+import sound from "./assets/audio/Anne-Marie_-_Birthday.mp3";
 
 const App = () => {
   const [index, setIndex] = useState(0);
@@ -20,6 +21,11 @@ const App = () => {
   const images = [img1, img2, img3, img4, img4, img5, img6, img7];
 
   useEffect(() => {
+    const music = new Audio(sound);
+    music.play();
+    music.autoplay = true;
+    music.loop = true;
+
     setTimeout(() => {
       setIndex(Math.floor(Math.random() * 6));
       setIndex1(Math.floor(Math.random() * 6));
@@ -31,9 +37,7 @@ const App = () => {
       <img id="ballon" src={ballon} alt="ballon" />
       <img id="ballon3" src={ballon3} alt="ballon" />
       <img id="ballon2" src={ballon2} alt="ballon" />
-      <audio autoPlay loop>
-        <source src="./assets/audio/Anne-Marie_-_Birthday.mp3" />
-      </audio>
+
       <div className="container">
         <Fade className="main" direction="up">
           <div>
