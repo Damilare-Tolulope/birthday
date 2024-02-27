@@ -19,13 +19,15 @@ const App = () => {
   const [index1, setIndex1] = useState(1);
 
   const images = [img1, img2, img3, img4, img4, img5, img6, img7];
+  // const music = new Audio(sound);
 
   useEffect(() => {
-    const music = new Audio(sound);
-    music.play();
-    music.autoplay = true;
-    music.loop = true;
-
+    // setTimeout(() => {
+    //   music.autoplay = true;
+    //   music.muted = true;
+    //   music.loop = true;
+    //   music.play();
+    // }, 3000);
     setTimeout(() => {
       setIndex(Math.floor(Math.random() * 6));
       setIndex1(Math.floor(Math.random() * 6));
@@ -37,7 +39,15 @@ const App = () => {
       <img id="ballon" src={ballon} alt="ballon" />
       <img id="ballon3" src={ballon3} alt="ballon" />
       <img id="ballon2" src={ballon2} alt="ballon" />
-
+      <iframe
+        src={sound}
+        allow="autoplay"
+        id="audio"
+        style={{ display: "none" }}
+      ></iframe>
+      <audio autoPlay loop muted={false}>
+        <source src={sound} />
+      </audio>
       <div className="container">
         <Fade className="main" direction="up">
           <div>
